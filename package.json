@@ -1,0 +1,27 @@
+{
+  "name": "tree-shaking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:webpack": "./node_modules/webpack-cli/bin/cli.js --mode production --display-used-exports",
+    "build:rollup": "./node_modules/rollup/dist/bin/rollup -c",
+    "build:parcel": "./node_modules/parcel-bundler/bin/cli.js build index.js --out-file parcel-index.js --experimental-scope-hoisting",
+    "build:all": "yarn build:webpack & yarn build:rollup & yarn build:parcel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "rollup": "^1.27.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.15"
+  },
+  "sideEffects": true
+}
