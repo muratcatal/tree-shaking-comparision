@@ -21,7 +21,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "lodash-es": "^4.17.15"
+    "lodash-es": "^4.17.21"
   },
   "sideEffects": true
 }
